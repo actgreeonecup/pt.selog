@@ -35,6 +35,7 @@
       <section class="productivity-report">
         <h2>Form Pengisian Laporan Produktifitas</h2>
         <form name="#" id="productivityForm">
+          <div id="form_alerts"></div>
           <div class="form-group">
             <label for="date">Tanggal</label>
             <input type="date" id="date" name="date" required />
@@ -52,15 +53,31 @@
               <option>--Pilih Bagian--</option>
               <option>Receiving</option>
               <option>Shipping</option>
+              <option>Storage</option>
+              <option>Inventory</option>
+              <option>Administrasi</option>
+              <option>HSE</option>
+              <option>Claim</option>
+              <option>Kaizen</option>
+              <option>Istirahat</option>
+              <option>Break</option>
             </select>
           </div>
           <div class="form-group">
             <label for="task">Tugas yang Diselesaikan</label>
             <textarea id="task" name="task" rows="4" required></textarea>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="hours">Jumlah Jam Kerja</label>
             <input type="number" id="hours" name="hours" required />
+          </div> -->
+          <div class="form-group">
+            <label for="jamMulai">Jam mulai</label>
+            <input type="time" id="jamMulai" name="jamMulai" required />
+          </div>
+          <div class="form-group">
+            <label for="jamSelesai">Jam selesai</label>
+            <input type="time" id="jamSelesai" name="jamSelesai" required />
           </div>
           <div class="button" style="width: 100%">
             <button
@@ -87,9 +104,7 @@
       </section>
     </main>
     <footer>
-      <p>
-        &copy; 2024 Perusahaan XYZ. Semua hak cipta dilindungi undang-undang.
-      </p>
+      <p>&copy; 2024 PT. SERASI LOGISTIK</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
