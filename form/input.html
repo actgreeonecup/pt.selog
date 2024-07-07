@@ -24,7 +24,7 @@
           <li>
             <a href="index.html" target="_blank">Produktifitas</a>
           </li>
-          <li><a href="input.html">Keluar</a></li>
+          <li><a href="index.html">Keluar</a></li>
         </ul>
       </nav>
     </header>
@@ -290,14 +290,14 @@
             btnKirim.classList.toggle("d-none");
             myAlert.classList.toggle("d-none");
             $("#form_alerts").html(
-              "<div class='alert alert-success'>Data berhasil dikirim.</div>"
+              "<div class='alert alert-danger'>Data gagal terkirim!.</div>"
             );
           })
           .catch((error) => {
             btnLoading.classList.toggle("d-none");
             btnKirim.classList.toggle("d-none");
             $("#form_alerts").html(
-              "<div class='alert alert-danger'>Data gagal terkirim!.</div>"
+              "<div class='alert alert-success'>Data berhasil dikirim.</div>"
             );
           });
 
