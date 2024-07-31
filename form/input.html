@@ -179,8 +179,12 @@
             selisih = selesai - mulai;
           }
 
-          const jamKerja = selisih / (1000 * 60 * 60);
-          document.getElementById("hours").value = jamKerja.toFixed(2);
+          const totalMinutes = selisih / (1000 * 60);
+          const hours = Math.floor(totalMinutes / 60);
+          const minutes = Math.round(totalMinutes % 60);
+          document.getElementById("hours").value = `${hours}.${minutes
+            .toString()
+            .padStart(2, "0")}`;
         }
       }
 
@@ -296,6 +300,7 @@
           .catch((error) => {
             btnLoading.classList.toggle("d-none");
             btnKirim.classList.toggle("d-none");
+
             $("#form_alerts").html(
               "<div class='alert alert-success'>Data berhasil dikirim.</div>"
             );
