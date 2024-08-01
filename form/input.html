@@ -90,7 +90,7 @@
                 <option>Mid Year Report</option>
                 <option>Yearly Report</option>
                 <option>STO / Sampling</option>
-                <option>HSE (5S, APAR, Swapantau dll)</option>
+                <option>Print Picking Slip</option>
                 <option>GA (Kuras Toren, Cek Bangunan dll)</option>
                 <option>HR (Data Absensi, dll)</option>
                 <option>Brifing</option>
@@ -103,6 +103,9 @@
                 <option>Legal Activity</option>
                 <option>Enggagement / Humas / Kunjungan</option>
                 <option>Kegiatan External Perusahaan</option>
+                <option>Izin</option>
+                <option>Cuti</option>
+                <option>Sakit</option>
               </select>
             </div>
             <div class="form-group">
@@ -305,7 +308,8 @@
               "<div class='alert alert-success'>Data berhasil dikirim.</div>"
             );
           });
-
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
         form.reset();
       });
     </script>
