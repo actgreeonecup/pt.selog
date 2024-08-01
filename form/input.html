@@ -108,6 +108,27 @@
                 <option>Sakit</option>
               </select>
             </div>
+            <div class="input-box">
+              <label for="AKTIVITAS" class="form-label">Area</label>
+              <select
+                type="text"
+                id="bagian"
+                name="bagian"
+                class="form-control"
+                placeholder="Pilih Area"
+                required
+              >
+                <option>--Pilih Area--</option>
+                <option>Inventory</option>
+                <option>Receiving</option>
+                <option>Issuing</option>
+                <option>Shipping</option>
+                <option>Storage</option>
+                <option>Claim</option>
+                <option>HSE GA</option>
+                <option>ADM HR</option>
+              </select>
+            </div>
             <div class="form-group">
               <label for="task">Tugas yang Diselesaikan</label>
               <textarea id="task" name="task" rows="4" required></textarea>
@@ -210,78 +231,92 @@
         // Tambahkan data dari localStorage ke FormData
         formData.append("namaPekerja", namaPekerja);
         formData.append("nrpPekerja", nrpPekerja);
+        // let koor;
+        // if (bagian == "issuing") {
+        //   koor = "Roni Surhayanto";
+        // } else if (bagian == "Receiving") {
+        //   koor = "Ilham Putra Pratama";
+        // } else if (bagian == "Inventory") {
+        //   koor = "Reyza Abdul Rozak";
+        // } else if (bagian == "Storage") {
+        //   koor = "Mas Gilang Ginanjar";
+        // } else if (bagian == "HSE GA") {
+        //   koor = "Kiki Purnama";
+        // } else if (bagian == "Shipping") {
+        //   koor = "Johan Safarisa Sidik";
+        // }
 
         // Cek aktivitas dan tambahkan bagian yang sesuai
-        const aktivitas = formData.get("AKTIVITAS");
-        const bagianKoorMapping = {
-          receiving: "Ilham Putra Pratama",
-          issuing: "Roni Suharyanto",
-          shipping: "Johan Safarisa Sidik",
-          "HSE dan GA": "Kiki Purnama",
-          administrasi: "Vidya Nirmala Putri",
-          quality: "Sony Purnomo",
-          storage: "Mas Gilang Ginanjar",
-          inventory: "Reyza Abdurrozaq",
-        };
+        // const aktivitas = formData.get("AKTIVITAS");
+        // const bagianKoorMapping = {
+        //   receiving: "Ilham Putra Pratama",
+        //   issuing: "Roni Suharyanto",
+        //   shipping: "Johan Safarisa Sidik",
+        //   "HSE dan GA": "Kiki Purnama",
+        //   administrasi: "Vidya Nirmala Putri",
+        //   quality: "Sony Purnomo",
+        //   storage: "Mas Gilang Ginanjar",
+        //   inventory: "Reyza Abdurrozaq",
+        // };
 
-        const receivingActivities = [
-          "Binning",
-          "Checking Receiving",
-          "Cleansing Receiving",
-          "Unloading",
-          "Claim Depo to TAM",
-        ];
-        const inventoryActivities = [
-          "Inventory",
-          "Procurement",
-          "Supply Operation",
-          "BO Monitoring",
-          "Claim Customer to Depo",
-        ];
-        const storageActivities = [
-          "Reserve",
-          "Replenishment",
-          "Relocation",
-          "Trouble Shooter",
-          "Maintain Location",
-          "Maintain F",
-        ];
-        const issuingActivities = [
-          "Picking Issuing",
-          "Checking Issuing",
-          "Packaging Preparation",
-          "Packing",
-          "Picking - Checking - Packing (PCP)",
-          "Cleansing Issuing",
-        ];
-        const billingActivities = [
-          "Billing",
-          "Loading",
-          "Shipping Monitoring",
-          "Monitoring Shipping Document",
-        ];
-        const qualityActivities = ["Quality"];
-        const hseAndGaActivities = ["HSE", "GA"];
-        const adminActivities = ["Administrasi", "HR"];
+        // const receivingActivities = [
+        //   "Binning",
+        //   "Checking Receiving",
+        //   "Cleansing Receiving",
+        //   "Unloading",
+        //   "Claim Depo to TAM",
+        // ];
+        // const inventoryActivities = [
+        //   "Inventory",
+        //   "Procurement",
+        //   "Supply Operation",
+        //   "BO Monitoring",
+        //   "Claim Customer to Depo",
+        // ];
+        // const storageActivities = [
+        //   "Reserve",
+        //   "Replenishment",
+        //   "Relocation",
+        //   "Trouble Shooter",
+        //   "Maintain Location",
+        //   "Maintain F",
+        // ];
+        // const issuingActivities = [
+        //   "Picking Issuing",
+        //   "Checking Issuing",
+        //   "Packaging Preparation",
+        //   "Packing",
+        //   "Picking - Checking - Packing (PCP)",
+        //   "Cleansing Issuing",
+        // ];
+        // const billingActivities = [
+        //   "Billing",
+        //   "Loading",
+        //   "Shipping Monitoring",
+        //   "Monitoring Shipping Document",
+        // ];
+        // const qualityActivities = ["Quality"];
+        // const hseAndGaActivities = ["HSE", "GA"];
+        // const adminActivities = ["Administrasi", "HR"];
 
-        let bagian = "";
-        if (receivingActivities.includes(aktivitas)) {
-          bagian = "receiving";
-        } else if (inventoryActivities.includes(aktivitas)) {
-          bagian = "inventory";
-        } else if (storageActivities.includes(aktivitas)) {
-          bagian = "storage";
-        } else if (issuingActivities.includes(aktivitas)) {
-          bagian = "issuing";
-        } else if (billingActivities.includes(aktivitas)) {
-          bagian = "Shipping";
-        } else if (qualityActivities.includes(aktivitas)) {
-          bagian = "quality";
-        } else if (hseAndGaActivities.includes(aktivitas)) {
-          bagian = "HSE dan GA";
-        } else if (adminActivities.includes(aktivitas)) {
-          bagian = "administrasi";
-        }
+        // let bagian = "";
+        // if (receivingActivities.includes(aktivitas)) {
+        //   bagian = "receiving";
+        // } else if (inventoryActivities.includes(aktivitas)) {
+        //   bagian = "inventory";
+        // } else if (storageActivities.includes(aktivitas)) {
+        //   bagian = "storage";
+        // } else if (issuingActivities.includes(aktivitas)) {
+        //   bagian = "issuing";
+        // } else if (billingActivities.includes(aktivitas)) {
+        //   bagian = "Shipping";
+        // } else if (qualityActivities.includes(aktivitas)) {
+        //   bagian = "quality";
+        // } else if (hseAndGaActivities.includes(aktivitas)) {
+        //   bagian = "HSE dan GA";
+        // } else if (adminActivities.includes(aktivitas)) {
+        //   bagian = "administrasi";
+        // }
 
         formData.append("bagian", bagian);
         formData.append("koordinator", bagianKoorMapping[bagian]);
