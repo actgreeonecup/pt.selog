@@ -247,17 +247,17 @@
         // }
 
         // Cek aktivitas dan tambahkan bagian yang sesuai
-        // const aktivitas = formData.get("AKTIVITAS");
-        // const bagianKoorMapping = {
-        //   receiving: "Ilham Putra Pratama",
-        //   issuing: "Roni Suharyanto",
-        //   shipping: "Johan Safarisa Sidik",
-        //   "HSE dan GA": "Kiki Purnama",
-        //   administrasi: "Vidya Nirmala Putri",
-        //   quality: "Sony Purnomo",
-        //   storage: "Mas Gilang Ginanjar",
-        //   inventory: "Reyza Abdurrozaq",
-        // };
+        const aktivitas = formData.get("AKTIVITAS");
+        const bagianKoorMapping = {
+          receiving: "Ilham Putra Pratama",
+          issuing: "Roni Suharyanto",
+          shipping: "Johan Safarisa Sidik",
+          "HSE dan GA": "Kiki Purnama",
+          administrasi: "Vidya Nirmala Putri",
+          quality: "Sony Purnomo",
+          storage: "Mas Gilang Ginanjar",
+          inventory: "Reyza Abdurrozaq",
+        };
 
         // const receivingActivities = [
         //   "Binning",
@@ -343,8 +343,7 @@
               "<div class='alert alert-success'>Data berhasil dikirim.</div>"
             );
           });
-        btnLoading.classList.toggle("d-none");
-        btnKirim.classList.toggle("d-none");
+
         form.reset();
       });
     </script>
