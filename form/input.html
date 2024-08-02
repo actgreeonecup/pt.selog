@@ -342,9 +342,12 @@
             $("#form_alerts").html(
               "<div class='alert alert-success'>Data berhasil dikirim.</div>"
             );
+            alert("Data berhasil terkirim");
           });
 
         form.reset();
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
       });
     </script>
   </body>
