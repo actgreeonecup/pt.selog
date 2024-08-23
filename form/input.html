@@ -53,6 +53,9 @@
               >
                 <option>--Pilih Aktifitas--</option>
                 <option>Inventory</option>
+                <option>Timelock</option>
+                <option>Print Picking Slip</option>
+                <option>Repacking Part</option>
                 <option>Procurement</option>
                 <option>Supply Operation</option>
                 <option>BO Monitoring</option>
@@ -125,6 +128,7 @@
                 <option>Shipping</option>
                 <option>Storage</option>
                 <option>Claim</option>
+                <option>Kaizen</option>
                 <option>HSE GA</option>
                 <option>ADM HR</option>
               </select>
@@ -231,20 +235,6 @@
         // Tambahkan data dari localStorage ke FormData
         formData.append("namaPekerja", namaPekerja);
         formData.append("nrpPekerja", nrpPekerja);
-        // let koor;
-        // if (bagian == "issuing") {
-        //   koor = "Roni Surhayanto";
-        // } else if (bagian == "Receiving") {
-        //   koor = "Ilham Putra Pratama";
-        // } else if (bagian == "Inventory") {
-        //   koor = "Reyza Abdul Rozak";
-        // } else if (bagian == "Storage") {
-        //   koor = "Mas Gilang Ginanjar";
-        // } else if (bagian == "HSE GA") {
-        //   koor = "Kiki Purnama";
-        // } else if (bagian == "Shipping") {
-        //   koor = "Johan Safarisa Sidik";
-        // }
 
         // Cek aktivitas dan tambahkan bagian yang sesuai
         const aktivitas = formData.get("AKTIVITAS");
