@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Kirim data ke Google Sheets
       fetch(
-        "https://script.google.com/macros/s/AKfycbwJXJXL2yoPnyoXyHz1u6IMr2XpQHygv7W_mqdjTwoz55SBgHtsLEUN0LmJdTYcCWtq/exec",
+        "https://script.google.com/macros/s/AKfycby3xkcJjwoi5dr3veIAKZf3J98kJcUpvyv7u6jXM-jL74G95qdXzkjmriO8qxLsHwQKSA/exec",
         {
           method: "POST",
           headers: {
@@ -188,7 +188,6 @@ document.addEventListener("DOMContentLoaded", function () {
             jamMulai: jamMulai,
             jamSelesai: jamSelesai,
             koor: koordinator,
-            hours: hours,
           }),
         }
       )

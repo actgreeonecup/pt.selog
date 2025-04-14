@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>DASHBOARD KARYAWAN</title>
-    <link
-      rel="shortcut icon"
-      href="img/lambang_081914.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="dashboard.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
@@ -53,7 +49,7 @@
               >
                 <option>--Pilih Aktifitas--</option>
                 <option>Inventory</option>
-                <option>Timelock</option>
+                <option>Temlock</option>
                 <option>Print Picking Slip</option>
                 <option>Repacking Part</option>
                 <option>Procurement</option>
@@ -150,7 +146,7 @@
               <input type="text" id="hours" name="hours" readonly />
             </div>
           </div>
-          <div class="button" style="width: 100%">
+          <div class="button mb-5" style="width: 100%">
             <button
               type="submit"
               onclick="UploadFile();"
@@ -179,7 +175,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxeFYd5sd7BExGBJKmEFRXmzOq9bWIgyAKPe-wV48VEZj2INQN9vfhxEWUgIhL9yFKtKw/exec";
+        "https://script.google.com/macros/s/AKfycby3xkcJjwoi5dr3veIAKZf3J98kJcUpvyv7u6jXM-jL74G95qdXzkjmriO8qxLsHwQKSA/exec";
       const form = document.forms["#"];
 
       const btnKirim = document.querySelector(".btn-kirim");
